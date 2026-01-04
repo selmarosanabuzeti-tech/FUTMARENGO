@@ -4,10 +4,11 @@ export interface Participant {
   name: string;
   amount: number;
   paid: boolean;
-  createdAt: number;
+  created_at?: string;
 }
 
 export interface AppSettings {
+  id?: string;
   goal: number;
-  contributionValue: number;
+  contribution_value: number;
 }
