@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# ⚽ FUT MARENGO - Aplicativo de Vaquinha
 
-This contains everything you need to run your app locally.
+Este é o sistema oficial de arrecadação do grupo **FUT MARENGO**. Desenvolvido com React, Tailwind CSS e Supabase.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1CtNi95ElCtTnA9WDvzCXUGhckRhGVsfc
+## 🚀 Como Rodar Localmente
 
-## Run Locally
+1. Clone o repositório.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Crie um arquivo `.env` na raiz com suas chaves do Supabase:
+   ```env
+   VITE_SUPABASE_URL=sua_url_aqui
+   VITE_SUPABASE_ANON_KEY=sua_chave_anon_aqui
+   ```
+4. Inicie o projeto:
+   ```bash
+   npm run dev
+   ```
 
-**Prerequisites:**  Node.js
+## 🌐 Deploy na Vercel
 
+1. Suba este código para um repositório no seu **GitHub**.
+2. No dashboard da **Vercel**, clique em "Add New Project".
+3. Importe o repositório do GitHub.
+4. Em **Environment Variables**, adicione:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+5. Clique em **Deploy**.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛡️ Segurança
+O painel administrativo é protegido pela senha definida no código (`App.tsx`). Para maior segurança em produção, considere implementar Supabase Auth.
